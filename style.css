@@ -123,13 +123,30 @@ ul.nav-menu li:hover > .nav-submenu {
 }
 /* Stack image with text in phone screen */
 @media (max-width: 700px) {
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+    ul.nav-menu {
+        display: block;
+        height: auto;
+        padding: 0;
     }
-    .nav-menu a {
-        padding: 5px 8px;
+    ul.nav-menu > li > a {
+        min-height: 50px;
+        height: auto;
+        padding: 10px 16px;
+    }
+    ul.nav-submenu {
+        position: static;
+        width: auto;
+        opacity: 1;
+        pointer-events: auto;
+        display: none;
+        border-radius: 0;
+    }
+    ul.nav-menu li:hover > ul.nav-submenu,
+    ul.nav-menu li:focus-within > ul.nav-submenu {
+        display: block;
+    }
+    ul.nav-submenu li a {
+        padding: 10px 16px 10px 32px;
     }
     .intro {
         grid-template-columns: 1fr;
