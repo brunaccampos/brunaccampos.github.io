@@ -1,5 +1,5 @@
-/* 'display: flex' makes the element a flexbox, so that you can better control align, center, space */
-
+/* 2026 Bruna Campos. All rights reserved. */
+/* The website source code is available under the MIT License. Unless otherwise stated, the written content, images, CV, and other materials on this website are not licensed for redistribution. */
 
 /* General style */
 body {
@@ -31,7 +31,7 @@ ul.nav-menu {
     border-radius: 10px; /* round borders */
     height: 50px;
     justify-content: center; /* horizontal align (all items centered in page) */
-    gap: 50px; /* spacing between items */
+    gap: 10px; /* spacing between items */
     cursor: pointer;
     }
 ul.nav-menu li {
@@ -94,16 +94,41 @@ ul.nav-menu li:hover > .nav-submenu {
     pointer-events: all;
 }
 
-/* Style for images */
-img.homepage {
-    width: 100%;
-    height: 500px;
-    border-radius: 20px; /* round borders */
-    display: block; /* turn element into block to allow auto margins */
-    object-fit: cover;
-    margin-left: auto; /* horizontal align */
-    margin-right: auto; /* horizontal align */
+/* Add some padding between navigation bars and content */
+.navbar-bottom {
+    margin-top: 30px;
 }
+.navbar-top {
+    margin-bottom: 30px;
+}
+
+/* Introduction page */
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 20px;
+}
+.image-homepage img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block; /* turn element into block to allow auto margins */
+}
+.intro-text {
+    max-width: 1fr;
+    text-align: justify;
+}
+/* Stack image with text in phone screen */
+@media (max-width: 700px) {
+    .intro {
+        grid-template-columns: 1fr;
+    }
+    .image-homepage img {
+        max-width: 300px;
+    }
+}
+
+/* Style for images */
 img.navbar-bottom {
     width: 100%;
     position: relative;
