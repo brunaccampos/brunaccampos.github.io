@@ -28,7 +28,7 @@ a {
     color: inherit;
 }
 /* Spacing between list items */
- li {
+ul.list li {
     margin-bottom: 12px;
 }
 /* Navigation bar style */
@@ -39,7 +39,6 @@ ul.nav-menu {
     margin: 0;
     padding: 0;
     background-color: #a3deb6;
-    border-radius: 10px; /* round borders */
     height: 50px;
     justify-content: center; /* horizontal align (all items centered in page) */
     gap: 10px; /* spacing between items */
@@ -47,9 +46,11 @@ ul.nav-menu {
     }
 ul.nav-menu li {
     position: relative;
+    margin-bottom: 0;
 }
 ul.nav-menu li a {
     display: flex;
+    box-sizing: border-box;
     color: #36543f;
     padding: 0px 45px;
     text-decoration: none; /* remove the underbar */
@@ -60,7 +61,6 @@ ul.nav-menu li a {
 }
 ul.nav-menu li a:hover {
     background-color: #6c696980;
-    border-radius: 10px;
     color: white;
 }
 img.nav-menu {
