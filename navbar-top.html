@@ -1,0 +1,19 @@
+<!-- Open link in a separate tab: add target="_blank" in <a> block -->
+<!-- The part rel="noopener noreferrer" avoids performance issues, and prevents new tab from accessing the page via window.opener. Is a slight security improvement -->
+<!-- Remember to use relative paths with "/" so that the pages can be found from all the subpages -->
+<!DOCTYPE html>
+<html>
+    <nav class="navbar-top">
+      <ul class="nav-menu">
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/recipes.html">RECIPES</a>
+          <ul class="nav-submenu">
+          <li><a href="/recipes.html#salgados">Pratos Salgados</a></li>
+          <li><a href="/recipes.html#lanches">Lanches</a></li>
+          <li><a href="/recipes.html#sobremesas">Sobremesas</a></li>
+        </ul>
+        </li>
+      </ul>
+    </nav>
+<body></body>
+</html>
