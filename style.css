@@ -156,6 +156,26 @@ ul.nav-menu li:hover > .nav-submenu {
     ul.nav-submenu li a {
         padding: 10px 16px 10px 32px;
     }
+    nav.navbar-bottom ul.nav-menu {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+    nav.navbar-bottom ul.nav-menu > li {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    nav.navbar-bottom ul.nav-menu > li > a {
+        min-height: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    nav.navbar-bottom img.nav-menu {
+        width: 32px;
+        height: 32px;
+    }
     .intro {
         grid-template-columns: 1fr;
     }
