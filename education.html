@@ -15,16 +15,32 @@ The website source code is available under the MIT License. Unless otherwise sta
 </head>
 
 <body>
-    <div id="navbar-top"></div>
-    <script>
-    fetch("/navbar-top.html")
-      .then(response =>response.text())
-      .then(data => {
-        document.getElementById("navbar-top").innerHTML = data;
-      });
-    </script>
-    
+  <div id="navbar-top"></div>
+  <script>
+  fetch("/navbar-top.html")
+    .then(response =>response.text())
+    .then(data => {
+      document.getElementById("navbar-top").innerHTML = data;
+    });
+  </script>
+  
+  <h1>PhD, Civil and Environmental Engineering</h1>
+  <ul>
+    <li>University of Waterloo, Canada, 2021-2024</li>
+    <li>Thesis: Finite Element Models for Multiscale Porous Media</li>
+  </ul>
 
+  <h1>MASc, Structural Engineering</h1>
+  <ul>
+    <li>University of Minas Gerais (UFMG), Brazil, 2018-2020</li>
+    <li>Thesis: Numerical Integration by Subdivision of Elements using the GFEM</li>
+  </ul>
+
+  <h1>BASc, Civil Engineering</h1>
+  <ul>
+    <li>University of Uberlândia (UFU), Brazil, 2012-2017</li>
+    <li>Thesis: Structural solutions for concrete slabs with high conduit concentration</li>
+  </ul>
 
   <div id="navbar-bottom"></div>
   <script>

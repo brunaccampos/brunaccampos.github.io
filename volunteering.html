@@ -15,17 +15,24 @@ The website source code is available under the MIT License. Unless otherwise sta
 </head>
 
 <body>
-    <div id="navbar-top"></div>
-    <script>
-    fetch("/navbar-top.html")
-      .then(response =>response.text())
-      .then(data => {
-        document.getElementById("navbar-top").innerHTML = data;
-      });
-    </script>
+  <div id="navbar-top"></div>
+  <script>
+  fetch("/navbar-top.html")
+    .then(response =>response.text())
+    .then(data => {
+      document.getElementById("navbar-top").innerHTML = data;
+    });
+  </script>
     
+  <h2>University of Waterloo</h2>
+  <p>Professional Development Director at the Women in Engineering (WiE) Graduate Committee, 2023-2024</p>
 
+  <h2>United for Literacy</h2>
+  <p>Math tutor, 2023</p>
 
+  <h2>Program <i>Incluir</i></h2>
+  <p>English teacher and coordinator, 2019-2022</p>
+  
   <div id="navbar-bottom"></div>
   <script>
     fetch("/navbar-bottom.html")

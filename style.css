@@ -10,6 +10,9 @@ body {
 html {
     scroll-behavior: smooth; 
 }
+@view-transition {
+    navigation: auto;
+}
 a:visited {
     color: inherit; /*do not change color of a link after it is visited*/
 }
