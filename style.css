@@ -20,6 +20,9 @@ h2 {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
 }
+a {
+    color: inherit;
+}
 /* Navigation bar style */
 ul.nav-menu {
     display: flex;
@@ -142,42 +145,4 @@ img.navbar-bottom {
     width: 100%;
     position: relative;
     bottom: -10px;
-}
-
-/* Style for recipes page */
-ul.recipes {
-    list-style-type: none;
-    /* display: flex; */
-    margin: 0;
-    padding: 0;
-    /* justify-content: center; horizontal align (all items centered in page) */
-    /* gap: 50px; spacing between items */
-}
-ul.recipes li a {
-    display: block;
-    padding: 0;
-    text-decoration: none;
-    justify-content: center;
-    height: 100%; /* use total height of the menu boxes */
-    align-items: center; /* vertical align */
-}
-.three-columns {
-    /* use flexbox instead of column-count so that the content is divided by <div>, not equal-length columns */
-   display: flex;
-   justify-content: center;
-   gap: 200px;
-}
-
-/* Style for lists of ingredients (recipe subsection) */
-#ingredients li.done {
-    text-decoration: line-through;
-    color: gray;
-}
-ul.ingredients {
-    list-style-type: none;
-}
-ul.ingredients li::before {
-    content: "□";   /* empty square */
-    font-size: 20px;
-    margin-right: 10px;
 }

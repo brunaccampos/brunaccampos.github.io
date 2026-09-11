@@ -1,0 +1,64 @@
+<!-- 2026 Bruna Campos. All rights reserved.
+The website source code is available under the MIT License. Unless otherwise stated, the written content, images, CV, and other materials on this website are not licensed for redistribution. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Page">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Bruna Campos: Awards</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="navbar-top"></div>
+  <script>
+  fetch("/navbar-top.html")
+    .then(response =>response.text())
+    .then(data => {
+      document.getElementById("navbar-top").innerHTML = data;
+    });
+  </script>
+
+  <h2>University of Waterloo</h2>
+  <ul class="list">
+    <li>Graduate Student Research Dissemination Award, 2024-2025</li>
+    <li>Activity Report Award, 2024</li>
+    <li>International Doctoral Student Award, 2021-2024</li>
+    <li>Graduate Scholarship, 2024</li>
+    <li>Provost Doctoral Entrance Award for Women, 2021-2022</li>
+  </ul>
+
+  <h2>McMaster University</h2>
+  <ul class="list">
+    <li>Gunhard. A. E. Oravas Memorial Scholarship, 2024 <a href="https://oravas-foundation.com/">(website)</a></li>
+  </ul>
+
+  <h2>University of Calgary</h2>
+  NSERC Collaborative and Training Experience program
+  <ul>
+    <li>Winner of REDEVELOP Challenge, 2022</li>
+    <li>REDEVELOP Scholarship, 2022</li>
+  </ul>
+
+  <h2>Brazilian Math Opympiad</h2>
+  <i>Olimpíada Brasileira de Matemática das Escolas Públicas <a href="https://www.obmep.org.br/">(website)</a></i>
+  <ul>
+    <li>Gold medal, 2009</li>
+    <li>Bronze medal, 2007</li>
+  </ul>
+
+  <div id="navbar-bottom"></div>
+  <script>
+    fetch("/navbar-bottom.html")
+      .then(response =>response.text())
+      .then(data => {
+        document.getElementById("navbar-bottom").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
