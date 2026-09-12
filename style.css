@@ -129,13 +129,17 @@ ul.nav-menu li:hover > .nav-submenu {
     max-width: 1fr;
     text-align: justify;
 }
+.legend {
+    text-align: center;
+}
 
 /* Videos */
 .image-two-columns img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+    width: 110%;
+    height: 250px;
+    object-fit: cover;
     display: block;
+    margin: 0 auto;
 }
 .two-columns {
     display: grid;

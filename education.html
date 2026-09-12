@@ -63,13 +63,13 @@ The website source code is available under the MIT License. Unless otherwise sta
       <video autoplay loop>
         <source src="/images/deformation.mp4">
       </video>
-      <p>Solid velocity contour for a settlement simulation.</p>
+      <p class="legend">Solid velocity contour for a settlement simulation.</p>
     </div>
     <div class="video-two-columns">
       <video autoplay loop>
         <source src="/images/wave-propagation.mp4">
       </video>
-      <p>Solid velocity contour for wave propagation in a sandstone core sample simulation.</p>
+      <p class="legend">Solid velocity contour for wave propagation in a sandstone core sample simulation.</p>
     </div>
   </section>
 
@@ -108,6 +108,20 @@ The website source code is available under the MIT License. Unless otherwise sta
       fracture mechanics problems for physically nonlinear material and cohesive crack propagation</li>
   </ul>
 
+  <section class="two-columns">
+    <div class="image-two-columns">
+      <img src="/images/subdivision.png">
+      <p class="legend">Strategy of subdivision of elements crossed by a crack. The deformation history stored in the
+        quadrature points
+        is transfered to the new ones through a non-local function.</p>
+    </div>
+    <div class="image-two-columns">
+      <img src="/images/damage-model.png">
+      <p class="legend">Crack propagation in an L-shaped panel using the strategy of subdivision of elements for
+        accurate numerical integration.</p>
+    </div>
+  </section>
+
   <h1>BASc, Civil Engineering</h1>
   <ul class="list">
     <li>University of Uberlândia (UFU), Brazil, 2012-2017</li>
@@ -115,6 +129,22 @@ The website source code is available under the MIT License. Unless otherwise sta
     <li>Supervisor: Maria Cristina Vidigal Lima</li>
   </ul>
 
+  <p class="intro-text">
+    The graduation project aimed to study possible structural solutions for the design of <b>solid reinforced-concrete slabs</b> when
+    the effect of a <b>high concentration of electrical conduits</b> is taken into account. Situations like this are recurrent,
+    especially in multi-story residential buildings. They result in a reduction of the concrete's load-resisting
+    section, which may generate unforeseen stresses and make the deformation state critical.
+
+    The <b>TQS computational program</b> was used to model different scenarios for the typical floor of a previously selected
+    building, varying slab thickness, boundary conditions, and support conditions of the elements that make up the
+    conventional structural system. The data were later compared, with the aid of electronic spreadsheets, to determine
+    the best solution to adopt from both constructive and structural points of view.
+
+    Finally, additional options for the presented problem were discussed beyond those previously mentioned, such as the
+    use of auxiliary items for electrical conduits in the electrical design, and the adoption of ribbed, trussed, or
+    precast slabs.
+  </p>
+  
   <div id="navbar-bottom"></div>
   <script>
     fetch("/navbar-bottom.html")
