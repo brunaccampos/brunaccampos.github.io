@@ -210,8 +210,20 @@ ul.nav-menu li:hover > .nav-submenu {
     }
     .image-homepage img {
         max-width: 300px;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .intro-text,
+    .image-homepage {
+        width: 100%;
+        min-width: 0;
+    }
+    .image-homepage {
+        display: flex;
         justify-content: center;
-        align-items: center;
     }
 }
 
