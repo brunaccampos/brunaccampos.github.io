@@ -3,6 +3,7 @@ The website source code is available under the MIT License. Unless otherwise sta
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,38 +18,111 @@ The website source code is available under the MIT License. Unless otherwise sta
 <body>
   <div id="navbar-top"></div>
   <script>
-  fetch("/navbar-top.html")
-    .then(response =>response.text())
-    .then(data => {
-      document.getElementById("navbar-top").innerHTML = data;
-    });
+    fetch("/navbar-top.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-top").innerHTML = data;
+      });
   </script>
-  
+
   <h1>PhD, Civil and Environmental Engineering</h1>
   <ul class="list">
     <li>University of Waterloo, Canada, 2021-2024</li>
     <li>Thesis: Finite Element Models for Multiscale Porous Media</li>
+    <li>Supervisor: Prof. Dr. Robert Gracie</li>
   </ul>
+
+  <p class="intro-text">
+    Porous media consist of a solid matrix and interconnected pores, and their behavior is commonly described through
+    macroscopic models like <b>Biot (Bt) theory</b> or mixture-based approaches such as the <b>de la Cruz-Spanos (dCS)
+      model</b>. My PhD research comprised developing the first comprehensive <b>finite element formulations for the dCS
+      theory</b>, addressing consolidation and wave propagation in saturated rocks. The work showed that FE convergence
+    depends on solid-fluid coupling, that porosity-related micro-heterogeneity significantly alters wave
+    attenuation, especially for viscous fluids, and that discrepancies between Bt and dCS predictions vary with material
+    properties and frequency. Applications to <b>layered geological domains and core samples</b> demonstrated the
+    importance of the dCS slow S-wave and highlighted how the dCS formulation captures high-frequency and
+    laboratory-scale phenomena more accurately than Biot's model.
+  </p>
+
+  Find out more about it:
+
+  <ul class="list">
+    <li><a href="https://uwspace.uwaterloo.ca/items/5a7b10b3-f077-4277-942b-f0b9ca6230fc">Thesis dissertation</a></li>
+    <li><a href="https://github.com/brunaccampos/PoroelasticityFEM">Github</a> repository: PoroelasticityFEM</li>
+    <li><a href="https://doi.org/10.1002/nag.3636">Paper</a>: A FEM for three-field u-p-n poroelasticity with
+      nonreciprocal interactions</li>
+    <li><a href="https://doi.org/10.1002/nag.3916">Paper</a>: A dynamic three-field finite element model for wave
+      propagation in linear elastic porous media. </li>
+    <li><a href="https://doi.org/10.1016/j.advengsoft.2026.104172">Paper</a>: Multiphysics Wave Simulator for
+      Generalized Porous Media Across Scales</li>
+  </ul>
+
+
+  <section class="two-columns">
+    <div class="video-two-columns">
+      <video autoplay loop>
+        <source src="/images/deformation.mp4">
+      </video>
+      <p>Solid velocity contour for a settlement simulation.</p>
+    </div>
+    <div class="video-two-columns">
+      <video autoplay loop>
+        <source src="/images/wave-propagation.mp4">
+      </video>
+      <p>Solid velocity contour for wave propagation in a sandstone core sample simulation.</p>
+    </div>
+  </section>
+
 
   <h1>MASc, Structural Engineering</h1>
   <ul class="list">
-    <li>University of Minas Gerais (UFMG), Brazil, 2018-2020</li>
+    <li>Federal University of Minas Gerais (UFMG), Brazil, 2018-2020</li>
     <li>Thesis: Numerical Integration by Subdivision of Elements using the GFEM</li>
+    <li>Supervisor: Prof.Dr. Felicio Bruzzi Barros</li>
+  </ul>
+
+  <p class="intro-text">
+    My Master's degree comprised the employment of alternative <b>numerical integration
+      strategies</b> over the conventional ones to be applied in the <b>Generalized Finite Element
+      Method</b> context, specifically in two-dimensional Fracture Mechanics models.
+    I used the <b>subdivision of elements and mapping of the integration
+      points</b> in mesh elements containing discontinuities or singularities, therefore representing
+    the displacements and stress fields more precisely. The implemented strategies were validated
+    by analysing the strain energy and stiffness computed in a range of examples, comparing them to conventional Gauss
+    quadrature situations. The cited strategies were also applied in cases modelled by the Stable Generalized
+    Finite Element Method (GFEM), the global-local methodology (GFEM gl) and the
+    Physically Non-Linear Analysis. Good results were obtained, reducing processing
+    times due to the decrease in the number of integration points, which are allocated
+    taking into account problems particularities. Computational implementation was
+    done in the <b>open-source software INSANE</b> (INteractive Structural ANalysis
+    Environment).
+  </p>
+
+  Find out more about it:
+  <ul class="list">
+    <li><a href="https://repositorio.ufmg.br/items/20d8f9ba-f113-4524-95f8-11d58530247f">Thesis dissertation</a></li>
+    <li><a href="https://www.insane.dees.ufmg.br/pt/inicio/">INSANE</a> page</li>
+    <li><a href="https://doi.org/10.1108/EC-02-2020-0067">Paper</a>: On the numerical integration in
+      generalized/extended finite element method analysis for crack propagation problems</li>
+    <li><a href="https://doi.org/10.1108/EC-01-2021-0029">Paper</a>: Numerical integration in G/XFEM analysis of 2-D
+      fracture mechanics problems for physically nonlinear material and cohesive crack propagation</li>
   </ul>
 
   <h1>BASc, Civil Engineering</h1>
   <ul class="list">
     <li>University of Uberlândia (UFU), Brazil, 2012-2017</li>
     <li>Thesis: Structural solutions for concrete slabs with high conduit concentration</li>
+    <li>Supervisor: Maria Cristina Vidigal Lima</li>
   </ul>
 
   <div id="navbar-bottom"></div>
   <script>
     fetch("/navbar-bottom.html")
-      .then(response =>response.text())
+      .then(response => response.text())
       .then(data => {
         document.getElementById("navbar-bottom").innerHTML = data;
       });
   </script>
 </body>
+
 </html>
