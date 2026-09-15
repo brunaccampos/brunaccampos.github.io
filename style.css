@@ -135,7 +135,7 @@ ul.nav-menu li:hover > .nav-submenu {
 
 /* Videos */
 .image-two-columns img {
-    width: 110%;
+    width: 100%;
     height: 250px;
     object-fit: cover;
     display: block;
@@ -148,6 +148,54 @@ ul.nav-menu li:hover > .nav-submenu {
     width: min(100%, 1130px);
     margin: 0 auto;
     justify-content: center;
+}
+.volunteering-feature {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    width: min(100%, 1130px);
+    margin: 0 auto;
+    align-items: center;
+}
+.volunteering-feature > div:first-child {
+    min-width: 0;
+}
+.volunteering-feature > div:last-child {
+    min-width: 0;
+}
+.volunteering-feature p,
+.volunteering-three-columns p {
+    text-align: justify;
+}
+.volunteering-feature img {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+.volunteering-three-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) minmax(0, 0.55fr);
+    gap: 40px;
+    width: min(100%, 1130px);
+    margin: 0 auto;
+    align-items: center;
+}
+.volunteering-three-columns > div {
+    min-width: 0;
+}
+.volunteering-three-columns img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.volunteering-three-columns .logo-incluir {
+    height: 240px;
+}
+.volunteering-three-columns .logo-incluir-secondary {
+    height: 150px;
 }
 .video-two-columns video {
     width: 100%;
@@ -209,6 +257,19 @@ ul.nav-menu li:hover > .nav-submenu {
         width: 100%;
         gap: 20px;
     }
+    .volunteering-feature,
+    .volunteering-three-columns {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 20px;
+    }
+    .volunteering-feature img {
+        height: 180px;
+    }
+    .volunteering-three-columns .logo-incluir,
+    .volunteering-three-columns .logo-incluir-secondary {
+        height: 180px;
+    }
     .video-two-columns video {
         height: 220px;
     }
@@ -236,6 +297,34 @@ img.navbar-bottom {
     width: 100%;
     position: relative;
     bottom: -10px;
+}
+img.image-full-frame {
+    width: 80%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+img.logo-uliteracy {
+    width: 1fr;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+img.logo-wie {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+img.logo-incluir {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Follow the visitor's system color scheme. */

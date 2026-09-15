@@ -3,6 +3,7 @@ The website source code is available under the MIT License. Unless otherwise sta
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,29 +18,94 @@ The website source code is available under the MIT License. Unless otherwise sta
 <body>
   <div id="navbar-top"></div>
   <script>
-  fetch("/navbar-top.html")
-    .then(response =>response.text())
-    .then(data => {
-      document.getElementById("navbar-top").innerHTML = data;
-    });
+    fetch("/navbar-top.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-top").innerHTML = data;
+      });
   </script>
-    
-  <h2>University of Waterloo</h2>
-  <p>Professional Development Director at the Women in Engineering (WiE) Graduate Committee, 2023-2024</p>
 
-  <h2>United for Literacy</h2>
-  <p>Math tutor, 2023</p>
+  <section class="volunteering-feature">
+    <div>
+      <h2>University of Waterloo</h2>
+      <i>Professional Development Director at the Women in Engineering (WiE) Graduate Committee, 2023-2024</i>
+      <p>
+        The WiE committee gathers members from a variety of backgrounds focused on inspiring female-identifying students
+        to thrive in their future careers.
+        The committee provides resources, programs, and networking opportinities for women in engineering at Waterloo,
+        ON.
+        I have been a member of the WiE committee for two years, period in which I helped organizing activities such as
+        panel discussions with WiE leaders in industry and academia, as well as career fairs.
+        To find out more about the program, visit their <a
+          href="https://uwaterloo.ca/engineering-outreach/programs/women-in-engineering">website</a> or their <a
+          href="https://www.instagram.com/uwaterloowie/?hl=en">social media</a> page.
+      </p>
+    </div>
+    <div>
+      <p>
+        <a href="https://uwaterloo.ca/engineering-outreach/programs/women-in-engineering">
+          <img class="logo-wie" src="/images/wie-logo.png">
+        </a>
+      </p>
+    </div>
+  </section>
+  <img class="image-full-frame" src="/images/wie.jpg">
+  <p class="legend">WiE graduate committee members in June/2023.</p>
 
-  <h2>Program <i>Incluir</i></h2>
-  <p>English teacher and coordinator, 2019-2022</p>
-  
+  <section class="volunteering-feature">
+    <div>
+      <h2>United for Literacy</h2>
+      <i>Math tutor, 2023</i>
+      <p>
+        United for Literacy is an organization that delivers literacy programs to people in communities across Canada.
+        I joined the program during the summer of 2023 as a math tutor in <i>Number Ninjas</i>, an interactive numeracy
+        program for elementary learners in grades 1-3. The program took place at the Waterloo Public Library.
+        To find find out more about the program, visit their <a href="https://www.unitedforliteracy.ca/">website</a>.
+      </p>
+    </div>
+    <div>
+      <p>
+        <a href="https://www.unitedforliteracy.ca/">
+          <img class="logo-uliteracy" src="/images/united-literacy-logo.png">
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section class="volunteering-three-columns">
+    <div>
+      <img src="/images/projeto-incluir.png">
+    </div>
+    <div>
+      <h2>Program <i>Incluir</i></h2>
+      <i>English teacher and coordinator, 2019-2022</i>
+      <p>
+        The <i>Incluir</i> program is tied to the Federal University of Minas Gerais (Brazil) and promotes social
+        inclusion through education, oferring courses to support personal, academic, and professional development of
+        people in underserved communities.
+        I was part of the project during two and a half years, first as an English teacher and later as a coordinator as
+        well. I taught weekly classes to children from 7 to 12 years old.
+        To find out more about the program, visit their <a href="https://www.instagram.com/incluir.ufmg/">social
+          media</a> page (content in portuguese).
+      </p>
+    </div>
+    <div>
+      <p>
+        <a href="https://www.instagram.com/incluir.ufmg/">
+          <img class="logo-incluir-secondary" src="/images/projeto-incluir-logo.jpg">
+        </a>
+      </p>
+    </div>
+  </section>
+
   <div id="navbar-bottom"></div>
   <script>
     fetch("/navbar-bottom.html")
-      .then(response =>response.text())
+      .then(response => response.text())
       .then(data => {
         document.getElementById("navbar-bottom").innerHTML = data;
       });
   </script>
 </body>
+
 </html>
