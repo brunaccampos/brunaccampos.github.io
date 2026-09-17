@@ -136,8 +136,7 @@ ul.nav-menu li:hover > .nav-submenu {
 /* Videos */
 .image-two-columns img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -170,12 +169,11 @@ ul.nav-menu li:hover > .nav-submenu {
 .volunteering-feature img {
     width: 100%;
     max-width: 100%;
-    height: 220px;
-    object-fit: contain;
+    height: auto;
 }
 .volunteering-three-columns {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) minmax(0, 0.55fr);
+    grid-template-columns: minmax(0, 0.55fr) minmax(0, 2fr) minmax(0, 1.2fr);
     gap: 40px;
     width: min(100%, 1130px);
     margin: 0 auto;
@@ -192,10 +190,10 @@ ul.nav-menu li:hover > .nav-submenu {
     margin: 0 auto;
 }
 .volunteering-three-columns .logo-incluir {
-    height: 240px;
+    height: auto;
 }
 .volunteering-three-columns .logo-incluir-secondary {
-    height: 150px;
+    height: auto;
 }
 .video-two-columns video {
     width: 100%;
@@ -264,11 +262,11 @@ ul.nav-menu li:hover > .nav-submenu {
         gap: 20px;
     }
     .volunteering-feature img {
-        height: 180px;
+        height: auto;
     }
     .volunteering-three-columns .logo-incluir,
     .volunteering-three-columns .logo-incluir-secondary {
-        height: 180px;
+        height: auto;
     }
     .video-two-columns video {
         height: 220px;
@@ -300,29 +298,29 @@ img.navbar-bottom {
 }
 img.image-full-frame {
     width: 80%;
-    height: 600px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
 img.logo-uliteracy {
-    width: 1fr;
-    height: 100px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
 img.logo-wie {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
 img.logo-incluir {
     width: 200px;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
