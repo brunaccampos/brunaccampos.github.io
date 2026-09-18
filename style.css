@@ -132,6 +132,9 @@ ul.nav-menu li:hover > .nav-submenu {
 .legend {
     text-align: center;
 }
+.legend-justify {
+    text-align: justify;
+}
 
 /* Videos */
 .image-two-columns img {
@@ -201,6 +204,31 @@ ul.nav-menu li:hover > .nav-submenu {
     object-fit: cover;
     display: block;
     margin: 0 auto;
+}
+
+.caes-three-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 0.55fr) minmax(0, 2fr) minmax(0, 1.2fr);
+    gap: 40px;
+    width: min(100%, 1130px);
+    margin: 0 auto;
+    align-items: center;
+}
+.video-one-column {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+
+}
+.image-one-column {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+
 }
 
 /* Stack image with text in phone screen */

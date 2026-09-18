@@ -3,6 +3,7 @@ The website source code is available under the MIT License. Unless otherwise sta
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,24 +16,88 @@ The website source code is available under the MIT License. Unless otherwise sta
 </head>
 
 <body>
-    <div id="navbar-top"></div>
-    <script>
+  <div id="navbar-top"></div>
+  <script>
     fetch("/navbar-top.html")
-      .then(response =>response.text())
+      .then(response => response.text())
       .then(data => {
         document.getElementById("navbar-top").innerHTML = data;
       });
-    </script>
-    
-  <i>In progress</i>
+  </script>
 
+  <h1>Postdoctoral fellowship</h1>
+  <h2>CFD modelling of rotating mixing devices using HPC matrix-free algorithms</h2>
+
+  <i>**Section in progress**</i>
+
+  <h1>REDEVELOP Challenge</h1>
+  <h2>Economic and technical viability of salt cavern Compressed Air Energy Storage in Canada</h2>
+
+  <p class="intro-text">
+    In the REDEVELOP Challenge 2022, five groups of students from various Canadian universities focused on developing research on clean energy technologies and its integration with Indigenous communities. The research topic of my team was compressed air energy storage (CAES), and our research led to the elaboration of a policy paper, a conference abstract, and a conference poster. We also presented our findings to the Cold Lake First Nations through a virtual meeting. We had various meetings with industry representatives and academia members, aiming to expand our knowledge on the CAES technology. Our biggest contribution was to be able to share our findings with the Cold Lake First Nations, since a new CAES project was to be implemented in their region. We were grateful to partner with energy companies and contribute to the community's understanding of the technology. Our findings were also presented in the <a href=" https://geoconvention.com/2022-abstract-archive/">Geoconvention 2022</a> conference.
+  </p>
+
+  <section style="margin-top: 40px;" class="two-columns">
+    <div class="image-two-columns">
+      <img src="/images/caes-eletricity-grid.png">
+      <p class="legend-justify">
+        Comparison between Alberta's internal load and the electricity generationby hydraulic, solar, and wind sources;
+        results were normalized based on the highest value of each interval. As observed, internal load is not always
+        matched by the energy supplied by renewable sources. Aiming to increase the participation of such energy sources
+        into the grid and still match the internal load, energy storage becomes fundamental to circumvent grid
+        instabilities caused by intermittency of renewable systems. Data was collected from <a
+          href="https://www.aeso.ca/market/market-and-system-reporting/data-requests/">here</a>.
+      </p>
+    </div>
+    <div class="image-two-columns">
+      <img src="/images/caes-scheme.png">
+      <p class="legend-justify">
+        A CAES system has three main components: compressor, air storage reservoir, and expander. During off peak hours,
+        excess energy from the grid is converted into mechanical energy in the compression train. The resulting
+        compressed air is stored in a reservoir (salt cavern). Then, during peak hours, the air is released through the
+        expansion train, where mechanical conversion takes place again to move the
+        turbines and generate electricity to supplement the grid. Adapted from <a
+          href="https://energystorageeurope.eu/">here</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="caes-three-columns">
+    <div>
+      <img class="logo-incluir-secondary" src="/images/caes-logo.png">
+    </div>
+    <div>
+      <video class="video-one-column" autoplay loop>
+        <source src="/images/caes-video.mp4">
+      </video>
+      <p class="legend">Video presented by the CAES team at the REDEVELOP Challenge conference (2022).</p>
+    </div>
+    <div>
+      <p class="legend-justify">
+        The REDEVELOP program is an NSERC-funded project that aimed to create multi-university, interdisciplinary teams
+        tasked with finding solutions to scientific questions and/or problems impacting Canada's energy sector. In each edition, an eigth-month training period ended in a conference in Calgary (Alberta) where each team had to present five deliverables: a scientific poster, a 90s video for a general audience, a 15min presentation for a technical audience, and a policy paper. In its 2022 edition, four topics were addressed: CAES, methane
+        emissions, geothermal energy, ans carbon capture and storage.
+      </p>
+      <img class="volunteering-three-columns" src="/images/caes-logo-nserc.png">
+    </div>
+  </section>
+
+  <img style="margin-top: 40px;" class="image-full-frame" src="/images/caes-winner.jpg">
+  <p class="legend">
+    My team won the REDEVELOP Challenge 2022!
+  </p>
+  <p class="legend">
+    As the project manager, I coordinated our team composed by Jesus R. Parra, Sarah Hasan, Dalila Caparroz, and Aref
+    Rizehbandi.
+  </p>
   <div id="navbar-bottom"></div>
   <script>
     fetch("/navbar-bottom.html")
-      .then(response =>response.text())
+      .then(response => response.text())
       .then(data => {
         document.getElementById("navbar-bottom").innerHTML = data;
       });
   </script>
 </body>
+
 </html>
