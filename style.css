@@ -253,6 +253,9 @@ a.button:active {
     height: auto;
     margin: 0 auto;
 }
+.caes-three-columns .caes-logo {
+    width: 70%;
+}
 .video-one-column {
     width: 100%;
     height: auto;
