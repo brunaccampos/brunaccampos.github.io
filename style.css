@@ -3,12 +3,34 @@
 
 /* General style */
 body {
-    background-color: white;
+    background: linear-gradient(black, #525252);
     font-family: "Raleway", sans-serif;
     font-size: 18;
+    color: white;
+    min-height: 100vh; /*Force content to fill page so that top and bottom bars stay at the edges*/
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 html {
     scroll-behavior: smooth; 
+    min-height: 100%;
+}
+#navbar-top {
+    margin-bottom: 30px;
+    /* Keep the navigation bar at the top always visible while scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+#navbar-bottom {
+    margin-top: auto;
+}
+/* Make content in all pages to 80% left/right */
+body > :not(#navbar-top):not(#navbar-bottom):not(script) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 @view-transition {
     navigation: auto;
@@ -18,10 +40,12 @@ a:visited {
 }
 h1 {
     font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 40px;
 }
 h2 {
     font-family: "Raleway", sans-serif;
-    font-weight: 400;
+    font-weight: bold;
 }
 /* Remove color from links */
 a {
@@ -38,7 +62,6 @@ ul.nav-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #a3deb6;
     height: 50px;
     justify-content: center; /* horizontal align (all items centered in page) */
     gap: 10px; /* spacing between items */
@@ -62,47 +85,47 @@ ul.nav-menu li a {
 ul.nav-menu li a:hover {
     background-color: #6c696980;
     color: white;
+    transform: scale(1.05);
+}
+ul.nav-menu li a:active {
+    transform: scale(0.95);
 }
 img.nav-menu {
     width: 40px;
     height: 40px;
     border-radius: 0;
 }
-ul.nav-submenu {
-    position: absolute; /*position relative to the main menu item*/
-    top: 100%; /*distance to the main menu item */
-    left: 0;
-    width: 100%; /*make it larger than the menu to fit all titles in one line*/
-    padding: 0; /* remove default left padding*/
-    margin: 0;
-    opacity: 0;
-    pointer-events:none; /*does not allow the user to interact with the element*/
-    background-color: #36543f;
-    border-radius: 10px;
-    transition: all .3s ease;
-}
-ul.nav-submenu li {
+.collapsible-menu{
+    background-color: black;
+    opacity: 0.8;
+    min-height: 20px;
+    padding: 10px 0 10px 30px;
+    border-bottom: 2px solid white;
     position: relative;
-    display: block;
-    padding: 0.5rem 1rem;
-    text-align: left;
-    cursor: pointer;
-    transition: background .2s ease;
-    color: white;
+    z-index: 1000;
 }
-ul.nav-submenu li a {
-    color: white;
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.collapsible-menu a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-    display: block;
-    padding: 0.5rem 1rem;
 }
-ul.nav-submenu li a:hover {
-    background-color: #F7F7F780;
-    border-radius: 10px;
+.collapsible-menu label {
+    display: block; 
+    cursor: pointer; /* Make the label look like a link*/
+    background: url(/images/main-menu.png) no-repeat left center; /* Add menu icon */
+    background-size: 20px auto;
+    padding-left: 28px;
+    padding: 10px 0 10px 30px;
 }
-ul.nav-menu li:hover > .nav-submenu {
-    opacity: 1;
-    pointer-events: all;
+input#menu {
+    display: none; /*Hide checkbox*/
+}
+input:checked + label {
+    background-image: url(/images/cross.png); /* Add closing icon*/
 }
 
 /* Add some padding between navigation bars and content */
@@ -110,7 +133,35 @@ ul.nav-menu li:hover > .nav-submenu {
     margin-top: 30px;
 }
 .navbar-top {
-    margin-bottom: 30px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 10px 30px 10px 80px;
+    background-color: black;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1001;
+    border-bottom: 2px solid white;
+    /* Smootlh transition to open/close the menu */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px) scaleY(0.98);
+    transform-origin: top;
+    transition: max-height 0.3s ease, opacity 0.2s ease, transform 0.3s ease;
+}
+/* Toggle effect */
+input:checked ~ label {
+    background-image: url(/images/cross.png); /* Add closing icon*/
+}
+input:checked ~ .navbar-top {
+    max-height: 100vh;
+    /* Smooth transition to open/close the menu */
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scaleY(1);
 }
 
 /* Introduction page */
@@ -140,7 +191,7 @@ a.button {
     text-decoration: none;
     text-align: center;
     padding: 10px 20px;
-    background-color: #a3deb6;
+    background-color: #dd1c77;
     border-radius: 20px;
     box-shadow: 0 1px 1px #121212;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -398,30 +449,5 @@ img.logo-incluir {
     height: auto;
     display: block;
     margin: 0 auto;
-}
-
-/* Follow the visitor's system color scheme. */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: #f5f5f5;
-    }
-    ul.nav-menu {
-        background-color: #254d34;
-    }
-    ul.nav-menu li a {
-        color: #f5f5f5;
-    }
-    ul.nav-submenu {
-        background-color: #183323;
-    }
-    ul.nav-menu li a:hover,
-    ul.nav-submenu li a:hover {
-        background-color: #527861;
-        color: white;
-    }
-    a.button {
-    background-color: #183323;
-    }
 }
 

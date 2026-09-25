@@ -3,6 +3,7 @@ The website source code is available under the MIT License. Unless otherwise sta
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,12 +18,14 @@ The website source code is available under the MIT License. Unless otherwise sta
 <body>
   <div id="navbar-top"></div>
   <script>
-  fetch("/navbar-top.html")
-    .then(response =>response.text())
-    .then(data => {
-      document.getElementById("navbar-top").innerHTML = data;
-    });
+    fetch("/navbar-top.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-top").innerHTML = data;
+      });
   </script>
+
+  <h1>Awards & Distinctions</h1>
 
   <h2>University of Waterloo</h2>
   <ul class="list">
@@ -39,7 +42,10 @@ The website source code is available under the MIT License. Unless otherwise sta
   </ul>
 
   <h2>University of Calgary</h2>
-  NSERC Collaborative and Training Experience program
+  <p>
+    NSERC Collaborative and Training Experience program
+  </p>
+
   <ul>
     <li>Winner of REDEVELOP Challenge, 2022</li>
     <li>REDEVELOP Scholarship, 2022</li>
@@ -55,10 +61,11 @@ The website source code is available under the MIT License. Unless otherwise sta
   <div id="navbar-bottom"></div>
   <script>
     fetch("/navbar-bottom.html")
-      .then(response =>response.text())
+      .then(response => response.text())
       .then(data => {
         document.getElementById("navbar-bottom").innerHTML = data;
       });
   </script>
 </body>
+
 </html>
