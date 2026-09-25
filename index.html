@@ -3,6 +3,7 @@ The website source code is available under the MIT License. Unless otherwise sta
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,65 +16,72 @@ The website source code is available under the MIT License. Unless otherwise sta
 </head>
 
 <body>
-    <div id="navbar-top"></div>
-    <script>
+  <div id="navbar-top"></div>
+  <script>
     fetch("/navbar-top.html")
-      .then(response =>response.text())
+      .then(response => response.text())
       .then(data => {
         document.getElementById("navbar-top").innerHTML = data;
       });
-    </script>
-    
-    <!-- Introduction -->
-    <section class="intro">
-      <div class="intro-text">
-        <h1>Bruna Campos</h1>
-        <p>
-          I am a civil engineer specializing in computational mechanics, finite element modelling, and scientific software development.
-          My research focuses on computational modelling of multiphysics systems, including fluid flow, porous media, and wave propagation.
-        </p>
-        <p>
-          My current work as a postdoctoral fellow at Polytechnique Montreal involves the development of open-source CFD software for rotating reactors,
-          and the simulation of passive particle transport within a fluid using population balance equations.
-        </p>
-        <p>
-          I was born in Brazil and moved to Canada to start my PhD. I have also lived in London, UK during a one-year academic exchange program.
-          My "saved places" list on Google Maps is full with all the cities I have visited, and I am always looking forward to explore a new place.
-          Besides traveling, I enjoy reading, exercising, and spending time with family and friends. 
-        </p>
+  </script>
 
-        <section class="intro-buttons">
-          <div>
-            <a class="button" href="/documents/CV_BrunaCampos.pdf">Download CV <img class="button-download" src="/images/button-download-white.svg"></a>
-          </div>
-          <div>
-            <a class="button" onclick="copy_email(this)">Contact me</a>
-          </div>
-        </section>
-      </div>
+  <!-- Introduction -->
+  <section class="intro">
+    <div class="intro-text">
+      <h1>Bruna Campos</h1>
+      <p>
+        I am a civil engineer specializing in computational mechanics, finite element modelling, and scientific software
+        development.
+        My research focuses on computational modelling of multiphysics systems, including fluid flow, porous media, and
+        wave propagation.
+      </p>
+      <p>
+        My current work as a postdoctoral fellow at Polytechnique Montreal involves the development of open-source CFD
+        software for rotating reactors,
+        and the simulation of passive particle transport within a fluid using population balance equations.
+      </p>
+      <p>
+        I was born in Brazil and moved to Canada to start my PhD. I have also lived in London, UK during a one-year
+        academic exchange program.
+        My "saved places" list on Google Maps is full with all the cities I have visited, and I am always looking
+        forward to explore a new place.
+        Besides traveling, I enjoy reading, exercising, and spending time with family and friends.
+      </p>
 
-      <div class="image-homepage"> 
-        <img src="/images/profile.JPG" alt="Bruna Campos">
-      </div>
-    </section>
+      <section class="intro-buttons">
+        <div>
+          <a class="button" href="/documents/CV_BrunaCampos.pdf">Download CV <img class="button-download"
+              src="/images/button-download-white.svg"></a>
+        </div>
+        <div>
+          <a class="button" onclick="copy_email(this)">Contact me</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="image-homepage">
+      <img src="/images/profile.JPG" alt="Bruna Campos">
+    </div>
+  </section>
 
   <!-- Copy email script -->
   <script>
-  function copy_email(button){
-    navigator.clipboard.writeText("bu_caroline@hotmail.com");
-    button.textContent = "Copied email!";
+    function copy_email(button) {
+      navigator.clipboard.writeText("bu_caroline@hotmail.com");
+      button.textContent = "Copied email!";
 
-    setTimeout(() => {button.textContent = "Contact me";}, 2000);
-  }
+      setTimeout(() => { button.textContent = "Contact me"; }, 2000);
+    }
   </script>
 
   <div id="navbar-bottom"></div>
   <script>
     fetch("/navbar-bottom.html")
-      .then(response =>response.text())
+      .then(response => response.text())
       .then(data => {
         document.getElementById("navbar-bottom").innerHTML = data;
       });
   </script>
 </body>
+
 </html>
