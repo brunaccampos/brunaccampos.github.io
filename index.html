@@ -41,12 +41,31 @@ The website source code is available under the MIT License. Unless otherwise sta
           My "saved places" list on Google Maps is full with all the cities I have visited, and I am always looking forward to explore a new place.
           Besides traveling, I enjoy reading, exercising, and spending time with family and friends. 
         </p>
+
+        <section class="intro-buttons">
+          <div>
+            <a class="button" href="/documents/CV_BrunaCampos.pdf">Download CV <img class="button-download" src="/images/button-download-white.svg"></a>
+          </div>
+          <div>
+            <a class="button" onclick="copy_email(this)">Contact me</a>
+          </div>
+        </section>
       </div>
 
       <div class="image-homepage"> 
         <img src="/images/profile.JPG" alt="Bruna Campos">
       </div>
     </section>
+
+  <!-- Copy email script -->
+  <script>
+  function copy_email(button){
+    navigator.clipboard.writeText("bu_caroline@hotmail.com");
+    button.textContent = "Copied email!";
+
+    setTimeout(() => {button.textContent = "Contact me";}, 2000);
+  }
+  </script>
 
   <div id="navbar-bottom"></div>
   <script>
