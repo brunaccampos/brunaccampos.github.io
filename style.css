@@ -116,8 +116,9 @@ ul.nav-menu li:hover > .nav-submenu {
 /* Introduction page */
 .intro {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 0.7fr 400px;
     gap: 20px;
+    justify-content: center;
 }
 .image-homepage img {
     width: 100%;
@@ -126,7 +127,7 @@ ul.nav-menu li:hover > .nav-submenu {
     display: block; /* turn element into block to allow auto margins */
 }
 .intro-text {
-    max-width: 1fr;
+    max-width: 0.7fr;
     text-align: justify;
 }
 .intro-buttons {
