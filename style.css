@@ -44,8 +44,11 @@ h1 {
     font-size: 40px;
 }
 h2 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: bold;
+}
+h3 {
+    font-family: "Raleway", sans-serif;
 }
 /* Remove color from links */
 a {
@@ -354,7 +357,6 @@ a.button:active {
     height: auto;
     display: block;
     margin: 0 auto;
-
 }
 .image-one-column {
     width: 100%;
