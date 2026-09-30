@@ -181,6 +181,16 @@ input:checked ~ .navbar-top {
     max-width: 0.7fr;
     text-align: justify;
 }
+.layout-two-cols-with-boxes {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 30%;
+    gap: 24px;
+    align-items: center;
+}
+.boxes-facts .box {
+    box-sizing: border-box;
+    width: 100%;
+}
 .intro-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -217,6 +227,33 @@ a.button:active {
     text-align: justify;
 }
 
+/* Information Boxes */
+.box {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    width: 27%;
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.img-box {
+    height: 60%;
+    padding: 20px 20px 20px 10px; /*top right bottom left*/
+}
+
+.box-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+.box:active {
+    transform: scale(0.95);
+}
 /* Videos */
 .image-two-columns img {
     width: 100%;
@@ -375,6 +412,9 @@ a.button:active {
         grid-template-columns: 1fr;
         width: 100%;
         gap: 20px;
+    }
+    .layout-two-cols-with-boxes {
+        grid-template-columns: 1fr;
     }
     .volunteering-feature,
     .volunteering-three-columns {
