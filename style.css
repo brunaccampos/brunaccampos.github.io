@@ -242,7 +242,10 @@ a.button:active {
     height: 60%;
     padding: 20px 20px 20px 10px; /*top right bottom left*/
 }
-
+.img-box-caes {
+    height: 100%;
+    padding: 20px 25px 20px 15px; /*top right bottom left*/
+}
 .box-wrap {
     display: flex;
     align-items: center;
@@ -324,26 +327,27 @@ a.button:active {
     margin: 0 auto;
 }
 
-.caes-three-columns {
+.caes-two-columns {
     display: grid;
-    grid-template-columns: minmax(0, 0.55fr) minmax(0, 2fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     gap: 40px;
     width: min(100%, 1130px);
     margin: 0 auto;
     align-items: center;
 }
-.caes-three-columns > div {
+.caes-two-columns > div {
     min-width: 0;
 }
-.caes-three-columns img {
+.caes-two-columns img {
     display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
 }
-.caes-three-columns .caes-logo {
-    width: 70%;
+.caes-two-columns .caes-logo-nserc {
+    width: 100%;
+    max-width: 100%;
 }
 .video-one-column {
     width: 100%;
@@ -429,7 +433,7 @@ a.button:active {
     .volunteering-three-columns .logo-incluir-secondary {
         height: auto;
     }
-    .caes-three-columns {
+    .caes-two-columns {
         grid-template-columns: 1fr;
         width: 100%;
         gap: 20px;
