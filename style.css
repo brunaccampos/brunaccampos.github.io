@@ -10,6 +10,7 @@ body {
     background-attachment: fixed; /* Keeps the background static while scrolling */
     font-family: "Raleway", sans-serif;
     font-size: 18;
+    line-height: 1.5;
     color: #252525;
     min-height: 100vh; /*Force content to fill page so that top and bottom bars stay at the edges*/
     display: flex;
@@ -77,9 +78,13 @@ h3 {
 a {
     color: inherit;
 }
+/* Remove bullet from list items */
+.list {
+    list-style: none;
+}
 /* Spacing between list items */
 ul.list li {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 /* Navigation bar style */
 ul.nav-menu {
@@ -201,7 +206,6 @@ input:checked ~ .navbar-top {
 }
 .intro-text {
     max-width: 0.7fr;
-    text-align: justify;
 }
 .layout-two-cols-with-boxes {
     display: grid;
@@ -254,7 +258,7 @@ a.button:active {
 .box {
     display: flex;
     align-items: center;
-    height: 65px;
+    min-height: 65px;
     width: 27%;
     background-color: rgba(27,158,119, 0.7);
     box-shadow: 0 2px 2px rgb(27,158,119);
@@ -263,12 +267,18 @@ a.button:active {
 }
 
 .img-box {
-    height: 60%;
-    padding: 20px 20px 20px 10px; /*top right bottom left*/
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    padding: 0 20px 0 10px;
+    object-fit: contain;
 }
 .img-box-caes {
-    height: 100%;
-    padding: 20px 25px 20px 15px; /*top right bottom left*/
+    flex: 0 0 auto;
+    width: auto;
+    height: 48px;
+    padding: 0 25px 0 15px;
+    object-fit: contain;
 }
 .box-wrap {
     display: flex;
