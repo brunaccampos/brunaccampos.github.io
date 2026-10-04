@@ -65,7 +65,7 @@ h3 {
 .block-pink {
     background-color: #d8d3df;
     box-shadow: 0 2px 2px #decbe4;
-    padding: 50px 0 50px 0;
+    padding: 50px 10px 50px 10px;
 }
 .block-orange {
     background-color: rgba(253,205,172, 0.95);
@@ -391,6 +391,13 @@ a.button:active {
 
 /* Stack image with text in phone screen */
 @media (max-width: 700px) {
+    .block-green,
+    .block-pink,
+    .block-orange {
+        box-sizing: border-box;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
     ul.nav-menu {
         display: block;
         height: auto;
