@@ -474,7 +474,8 @@ a.button:active {
         width: 100%;
         gap: 20px;
     }
-    .layout-two-cols-with-boxes {
+    .layout-two-cols-with-boxes,
+    .layout-two-cols-equal-size {
         grid-template-columns: 1fr;
     }
     .volunteering-feature,
