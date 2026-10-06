@@ -58,20 +58,26 @@ h3 {
 }
 
 /* Add background color to a section */
-.block-green {
-    background-color: rgba(102,194,165, 0.95);
-    box-shadow: 0 2px 2px #8dd3c7;
-    padding: 20px 100px 10px 100px;
+.block-color {
+    background-color: #a4ac86;
+    box-shadow: 0 2px 2px #718355;
+    padding: 20px 100px 10px 100px; /*top right bottom left*/
 }
-.block-pink {
-    background-color: #d8d3df;
-    box-shadow: 0 2px 2px #decbe4;
-    padding: 50px 10px 50px 10px;
+.block-color-home {
+    background-color: #c2c5aa;
+    box-shadow: 0 2px 2px #a4ac86;
+    padding: 50px 10px 50px 10px; /*top right bottom left*/
 }
-.block-orange {
-    background-color: rgba(253,205,172, 0.95);
+.block-color-note {
+    background-color: #c2c5aa;
     box-shadow: 0 2px 2px #decbe4;
-    padding: 20px 100px 10px 100px;
+    padding: 15px;
+}
+.block-title {
+    background-color: #c2c5aa;
+    box-shadow: 0 2px 2px #a4ac86;
+    width: 50%;
+    padding: 0 15px 0 15px;
 }
 
 /* Remove color from links */
@@ -81,6 +87,7 @@ a {
 /* Remove bullet from list items */
 .list {
     list-style: none;
+    padding-left: 0;
 }
 /* Spacing between list items */
 ul.list li {
@@ -123,7 +130,7 @@ img.nav-menu {
     border-radius: 0;
 }
 .collapsible-menu{
-    background-color: #969696;
+    background-color: #333d29;
     opacity: 0.95;
     min-height: 20px;
     padding: 10px 0 10px 30px;
@@ -167,7 +174,8 @@ input:checked + label {
     box-sizing: border-box;
     margin-bottom: 0;
     padding: 10px 30px 10px 80px;
-    background-color: #969696;
+    background-color: #333d29;
+    color: white;
     max-height: 0;
     overflow: hidden;
     z-index: 1001;
@@ -213,6 +221,12 @@ input:checked ~ .navbar-top {
     gap: 24px;
     align-items: center;
 }
+.layout-two-cols-equal-size{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 50%;
+    gap: 24px;
+    align-items: center;
+}
 .boxes-facts .box {
     box-sizing: border-box;
     width: 100%;
@@ -228,7 +242,7 @@ a.button {
     text-decoration: none;
     text-align: center;
     padding: 10px 20px;
-    background-color: #969696;
+    background-color: #333d29;
     border-radius: 20px;
     box-shadow: 0 1px 1px #525252;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -250,9 +264,6 @@ a.button:active {
 .legend {
     text-align: center;
 }
-.legend-justify {
-    text-align: justify;
-}
 
 /* Information Boxes */
 .box {
@@ -260,10 +271,13 @@ a.button:active {
     align-items: center;
     min-height: 65px;
     width: 27%;
-    background-color: rgba(27,158,119, 0.7);
-    box-shadow: 0 2px 2px rgb(27,158,119);
+    background-color: #a4ac86;
+    box-shadow: 0 2px 2px #656d4a;
     border-radius: 10px;
     color:white;
+}
+.box-text {
+    margin: 20px;
 }
 
 .img-box {
@@ -340,18 +354,35 @@ a.button:active {
 .volunteering-three-columns > div {
     min-width: 0;
 }
+.volunteering-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(100%, 500px);
+    margin: 0 auto 20px;
+    flex-wrap: wrap;
+}
+.volunteering-header h2 {
+    margin: 0;
+    text-align: left;
+}
+.volunteering-header p {
+    margin: 0;
+}
+.volunteering-header img.logo-volunteering {
+    display: block;
+    width: auto;
+    height: 70px;
+    max-width: 100%;
+    object-fit: contain;
+}
 .volunteering-three-columns img {
     display: block;
     width: 100%;
     max-width: 100%;
     object-fit: contain;
     margin: 0 auto;
-}
-.volunteering-three-columns .logo-incluir {
-    height: auto;
-}
-.volunteering-three-columns .logo-incluir-secondary {
-    height: auto;
 }
 .video-two-columns video {
     width: 100%;
@@ -375,14 +406,9 @@ a.button:active {
 }
 .caes-two-columns img {
     display: block;
-    width: 100%;
-    max-width: 100%;
+    width: 70%;
     height: auto;
     margin: 0 auto;
-}
-.caes-two-columns .caes-logo-nserc {
-    width: 100%;
-    max-width: 100%;
 }
 .video-one-column {
     width: 100%;
@@ -390,20 +416,10 @@ a.button:active {
     display: block;
     margin: 0 auto;
 }
-.image-one-column {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-
-}
 
 /* Stack image with text in phone screen */
 @media (max-width: 700px) {
-    .block-green,
-    .block-pink,
-    .block-orange {
+    .block-color {
         box-sizing: border-box;
         padding-right: 20px;
         padding-left: 20px;
@@ -470,10 +486,6 @@ a.button:active {
     .volunteering-feature img {
         height: auto;
     }
-    .volunteering-three-columns .logo-incluir,
-    .volunteering-three-columns .logo-incluir-secondary {
-        height: auto;
-    }
     .caes-two-columns {
         grid-template-columns: 1fr;
         width: 100%;
@@ -504,29 +516,22 @@ img.navbar-bottom {
     position: relative;
     bottom: -10px;
 }
-img.image-full-frame {
-    width: 80%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-img.logo-uliteracy {
+img.image-full-frame-landscape {
     width: 100%;
-    max-width: 100%;
+    max-width: 1000px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-img.logo-wie {
+img.image-full-frame-portrait {
+    width: auto;
+    height: 100%;
+    max-height: 530px;
+    display: block;
+    margin: 0 auto;
+}
+img.logo-volunteering {
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-img.logo-incluir {
-    width: 200px;
     max-width: 100%;
     height: auto;
     display: block;
