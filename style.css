@@ -227,6 +227,9 @@ input:checked ~ .navbar-top {
     gap: 24px;
     align-items: center;
 }
+.layout-two-cols-equal-size > * {
+    min-width: 0;
+}
 .boxes-facts .box {
     box-sizing: border-box;
     width: 100%;
@@ -526,7 +529,8 @@ img.image-full-frame-landscape {
 }
 img.image-full-frame-portrait {
     width: auto;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     max-height: 530px;
     display: block;
     margin: 0 auto;
